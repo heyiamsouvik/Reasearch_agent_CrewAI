@@ -9,7 +9,9 @@ temperature = float(os.getenv("RESEARCH_AGENT_TEMPERATURE"))
 
 llm = LLM(
     model=model,
-    temperature=temperature
+    temperature=temperature,
+    max_tokens=800,
+
 )
 
 research_specialist_agent = Agent(
@@ -19,8 +21,10 @@ research_specialist_agent = Agent(
                 "You are an expert research specialist with years of experience in information gathering "
                 "and fact-checking. You have a keen eye for reliable sources and can quickly identify the "
                 "most relevant and up-to-date information on any topic."
+                "make the report small and don't looose details"
             ),
     llm=llm,
     tools=[SerperDevTool()],
+    max_iter=5,
     verbose=True,
 )
