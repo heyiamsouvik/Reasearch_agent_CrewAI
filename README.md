@@ -60,7 +60,7 @@ Research_Agent/
 ### 1. Clone the repository
 
 ```
-git clone <your-repository-url>
+git clone https://github.com/heyiamsouvik/Reasearch_agent_CrewAI.git
 cd Research_Agent
 ```
 
